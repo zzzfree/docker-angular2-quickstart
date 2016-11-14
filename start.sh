@@ -1,0 +1,1 @@
+docker run --rm -ti -p 8088:3000 qs bash
