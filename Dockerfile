@@ -25,6 +25,6 @@ RUN cnpm install -g tslint typescript typings concurrently lite-server && \
 RUN cnpm install -g gulp 
 RUN cnpm install gulp --save-dev
 RUN cnpm install gulp-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-notify gulp-rename gulp-livereload gulp-cache --save-dev
-RUN cnpm install --save-dev gulp-webserver  browser-sync gulp-less
+RUN cnpm install --save-dev gulp-webserver  browser-sync  gulp-less gulp-tsc
 
 RUN cnpm update
