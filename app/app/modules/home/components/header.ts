@@ -1,7 +1,9 @@
 import { Component, Input } from '@angular/core';
+import { StoreService } from '../services/StoreService';
+
 @Component({
   selector: 'header', 
-  template: '<h1> header {{titleText}} </h1>',
+  template: ' <button (click)="setData()"> go </button> <h1> header {{titleText}} </h1> ',
   styles: [`
   h1{
 	color: red;
@@ -11,4 +13,12 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent { 
   @Input()
   titleText = 'test1';
+
+  constructor(private storeService : StoreService){    
+  }
+
+  setData(){
+    this.storeService.trigger('setData','gogogo');
+  }
+
 }
